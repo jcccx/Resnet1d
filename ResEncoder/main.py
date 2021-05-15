@@ -10,6 +10,7 @@ from torch.utils import data
 import torch.utils.data as Data
 from torch import nn, optim
 
+
 import sys
 sys.path.append("..")
 import d2lzh_pytorch as d2l
@@ -109,7 +110,7 @@ def dataset(root):
     return datas,labels
 
 def main():
-    path = r"D:\exper\compiler\stage2_compiler\sc_chunk"
+    path = r"D:\exper\compiler\sc_chunk"
     datas, labels = dataset(path)
     X_train, X_test, y_train, y_test = train_test_split(datas, labels, test_size=0.2, random_state=0,
                                                         stratify=labels)
